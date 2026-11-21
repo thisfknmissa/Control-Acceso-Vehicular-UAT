@@ -1,0 +1,121 @@
+{
+  "appName": "Control_Acceso_Vehicular_UAT",
+  "version": "1.0.0",
+  "institution": "Universidad Autónoma de Tamaulipas - Campus CUTM Sur",
+  "faculty": "Facultad de Ingeniería Tampico",
+  "tables": [
+    {
+      "name": "Registros_Acceso",
+      "key": "ID_Registro",
+      "label": "Placa",
+      "columns": [
+        {"name": "ID_Registro", "type": "Text", "required": true},
+        {"name": "Fecha", "type": "Date", "initialValue": "TODAY()"},
+        {"name": "Hora_Entrada", "type": "Time", "initialValue": "TIMENOW()"},
+        {"name": "Timestamp_Entrada", "type": "DateTime", "initialValue": "NOW()"},
+        {"name": "Caseta_Entrada", "type": "Ref", "sourceTable": "Casetas", "required": true},
+        {"name": "Placa", "type": "Ref", "sourceTable": "Vehiculos", "scannable": true, "required": true},
+        {"name": "Tipo_Vehiculo", "type": "Enum", "values": ["Automóvil", "Motocicleta", "Camioneta", "Carga"]},
+        {"name": "Marca_Modelo", "type": "Text"},
+        {"name": "Tipo_Usuario", "type": "Enum", "values": ["Estudiante", "Docente", "Administrativo", "Visitante"]},
+        {"name": "Nombre_Conductor", "type": "Text", "required": true},
+        {"name": "Matricula_ID", "type": "Text"},
+        {"name": "Motivo_Visita", "type": "Text"},
+        {"name": "Hora_Salida", "type": "Time"},
+        {"name": "Timestamp_Salida", "type": "DateTime"},
+        {"name": "Caseta_Salida", "type": "Ref", "sourceTable": "Casetas"},
+        {"name": "Tiempo_Permanencia_Min", "type": "Number"},
+        {"name": "Estatus_Transito", "type": "Enum", "values": ["Dentro", "Concluido"], "initialValue": "'Dentro'"},
+        {"name": "Guardia_Registro", "type": "Text", "initialValue": "USEREMAIL()"},
+        {"name": "Observaciones", "type": "LongText"}
+      ]
+    },
+    {
+      "name": "Vehiculos",
+      "key": "Placa",
+      "label": "Placa",
+      "columns": [
+        {"name": "Placa", "type": "Text", "required": true},
+        {"name": "ID_Usuario", "type": "Ref", "sourceTable": "Usuarios", "required": true},
+        {"name": "Nombre_Conductor", "type": "Text"},
+        {"name": "Tipo_Usuario", "type": "Enum", "values": ["Estudiante", "Docente", "Administrativo", "Visitante"]},
+        {"name": "Tipo_Vehiculo", "type": "Enum", "values": ["Automóvil", "Motocicleta", "Camioneta", "Carga"]},
+        {"name": "Marca", "type": "Text"},
+        {"name": "Modelo", "type": "Text"},
+        {"name": "Anio", "type": "Number"},
+        {"name": "Color", "type": "Text"},
+        {"name": "Tag_QR", "type": "Text"},
+        {"name": "Seguro_Vigente", "type": "Enum", "values": ["Sí", "No"]},
+        {"name": "Estatus_Acceso", "type": "Enum", "values": ["Autorizado", "Bloqueado", "Requiere Revisión"]},
+        {"name": "Observaciones", "type": "LongText"}
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "key": "ID_Usuario",
+      "label": "Nombre_Completo",
+      "columns": [
+        {"name": "ID_Usuario", "type": "Text", "required": true},
+        {"name": "Nombre_Completo", "type": "Text", "required": true},
+        {"name": "Tipo_Usuario", "type": "Enum", "values": ["Estudiante", "Docente", "Administrativo", "Visitante"]},
+        {"name": "Matricula_NoEmpleado", "type": "Text"},
+        {"name": "Facultad_Dependencia", "type": "Text"},
+        {"name": "Email_Institucional", "type": "Email"},
+        {"name": "Telefono", "type": "Phone"},
+        {"name": "Fecha_Registro", "type": "Date"},
+        {"name": "Estatus", "type": "Enum", "values": ["Activo", "Suspendido", "Temporal"]}
+      ]
+    },
+    {
+      "name": "Casetas",
+      "key": "ID_Caseta",
+      "label": "Nombre_Caseta",
+      "columns": [
+        {"name": "ID_Caseta", "type": "Text", "required": true},
+        {"name": "Nombre_Caseta", "type": "Text", "required": true},
+        {"name": "Ubicacion", "type": "Text"},
+        {"name": "Responsable_Turno", "type": "Text"},
+        {"name": "Telefono_Contacto", "type": "Phone"},
+        {"name": "Estatus", "type": "Enum", "values": ["Activa", "Mantenimiento", "Cerrada"]}
+      ]
+    }
+  ],
+  "slices": [
+    {
+      "name": "Vehiculos_Actualmente_Dentro",
+      "sourceTable": "Registros_Acceso",
+      "filter": "[Estatus_Transito] = 'Dentro'"
+    },
+    {
+      "name": "Accesos_Del_Dia",
+      "sourceTable": "Registros_Acceso",
+      "filter": "[Fecha] = TODAY()"
+    }
+  ],
+  "views": [
+    {
+      "name": "Entrada Rápida",
+      "type": "form",
+      "target": "Registros_Acceso",
+      "position": "left"
+    },
+    {
+      "name": "Vehículos en Campus",
+      "type": "deck",
+      "target": "Vehiculos_Actualmente_Dentro",
+      "position": "center"
+    },
+    {
+      "name": "Aforo en Vivo",
+      "type": "dashboard",
+      "target": "Registros_Acceso",
+      "position": "right"
+    },
+    {
+      "name": "Historial",
+      "type": "table",
+      "target": "Registros_Acceso",
+      "position": "menu"
+    }
+  ]
+}

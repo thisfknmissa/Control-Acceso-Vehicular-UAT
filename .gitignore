@@ -1,0 +1,9 @@
+# Archivos temporales y de grabación intermedia
+07_Video_Demostrativo_Guion/video_raw/
+07_Video_Demostrativo_Guion/video_raw_narrated/
+07_Video_Demostrativo_Guion/audio/*.wav
+*.tmp
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db

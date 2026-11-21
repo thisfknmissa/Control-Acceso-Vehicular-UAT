@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Video Demostrativo - Hackatón UAT & Google</title>
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #001a2c;
+        color: #ffffff;
+        overflow: hidden;
+        width: 1280px;
+        height: 720px;
+    }
+    .slide {
+        display: none;
+        width: 1280px;
+        height: 720px;
+        padding: 40px 60px;
+        position: relative;
+    }
+    .active { display: block; }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 3px solid #D99B00;
+        padding-bottom: 12px;
+        margin-bottom: 25px;
+    }
+    .header .logo-area h1 {
+        font-size: 20pt;
+        color: #ffffff;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+    .header .logo-area h2 {
+        font-size: 11pt;
+        color: #D99B00;
+        font-weight: 600;
+    }
+    .header .badge {
+        background: #002B49;
+        border: 1px solid #0f4c81;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 10pt;
+        color: #38bdf8;
+        font-weight: 600;
+    }
+    
+    .slide-title {
+        font-size: 22pt;
+        color: #ffffff;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .tag-bloque {
+        background: #D99B00;
+        color: #001f35;
+        font-size: 11pt;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+    
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 20px;
+    }
+    
+    .card {
+        background: rgba(15, 34, 56, 0.85);
+        border: 1px solid #1e3a5f;
+        border-radius: 10px;
+        padding: 20px 24px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .card h3 {
+        color: #38bdf8;
+        font-size: 13pt;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #1e3a5f;
+        padding-bottom: 6px;
+    }
+    .card p, .card li {
+        font-size: 10pt;
+        line-height: 1.6;
+        color: #cbd5e1;
+    }
+    .card ul { margin-left: 20px; }
+    
+    .highlight-box {
+        background: rgba(217, 155, 0, 0.12);
+        border-left: 4px solid #D99B00;
+        padding: 12px 18px;
+        border-radius: 0 8px 8px 0;
+        margin: 15px 0;
+        font-size: 10.5pt;
+        color: #fde68a;
+    }
+    
+    .table-custom {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        font-size: 9pt;
+    }
+    .table-custom th {
+        background: #002B49;
+        color: #ffffff;
+        padding: 8px 10px;
+        text-align: left;
+        border: 1px solid #1e3a5f;
+    }
+    .table-custom td {
+        padding: 8px 10px;
+        border: 1px solid #1e3a5f;
+        color: #cbd5e1;
+    }
+    .table-custom tr:nth-child(even) td { background: rgba(15, 34, 56, 0.5); }
+    
+    .footer-bar {
+        position: absolute;
+        bottom: 20px;
+        left: 60px;
+        right: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #1e3a5f;
+        padding-top: 12px;
+        font-size: 8.5pt;
+        color: #64748b;
+    }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: PORTADA -->
+<div class="slide active" id="slide1">
+    <div class="header">
+        <div class="logo-area">
+            <h1>UNIVERSIDAD AUTÓNOMA DE TAMAULIPAS</h1>
+            <h2>FACULTAD DE INGENIERÍA TAMPICO · CAMPUS CUTM SUR</h2>
+        </div>
+        <div class="badge">Google Dev Day 2026</div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 60px;">
+        <span class="tag-bloque" style="font-size: 13pt; padding: 6px 18px;">VIDEO DEMOSTRATIVO OFICIAL DEL PROYECTO</span>
+        <h2 style="font-size: 28pt; margin: 25px 0 15px 0; color: #ffffff;">Sistema de Control de Acceso Vehicular</h2>
+        <h3 style="font-size: 16pt; color: #38bdf8; font-weight: normal; margin-bottom: 35px;">
+            Desarrollado en <strong>Google AppSheet</strong> con Base de Datos Matriz en <strong>Google Sheets</strong>
+        </h3>
+        
+        <div style="display: inline-flex; gap: 30px; text-align: left; background: rgba(15, 34, 56, 0.9); padding: 20px 40px; border-radius: 12px; border: 1px solid #D99B00;">
+            <div>
+                <p style="color: #94a3b8; font-size: 9pt;">CONVOCATORIA:</p>
+                <p style="color: #ffffff; font-weight: bold; font-size: 11pt;">Hackatón UAT & Google</p>
+            </div>
+            <div style="border-left: 1px solid #334155; padding-left: 30px;">
+                <p style="color: #94a3b8; font-size: 9pt;">UNIDAD ACADÉMICA:</p>
+                <p style="color: #ffffff; font-weight: bold; font-size: 11pt;">Facultad de Ingeniería Tampico (F.I.T.)</p>
+            </div>
+            <div style="border-left: 1px solid #334155; padding-left: 30px;">
+                <p style="color: #94a3b8; font-size: 9pt;">DURACIÓN DEL VIDEO:</p>
+                <p style="color: #D99B00; font-weight: bold; font-size: 11pt;">Estructura Oficial (5 a 10 min)</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <span>Coordinación de Ingeniería en Sistemas Computacionales</span>
+        <span>Entrega Oficial: 20 de Noviembre de 2026</span>
+    </div>
+</div>
+
+<!-- SLIDE 2: BLOQUE 1 - PROBLEMÁTICA -->
+<div class="slide" id="slide2">
+    <div class="header">
+        <div class="logo-area">
+            <h1>SISTEMA DE CONTROL DE ACCESO VEHICULAR UAT</h1>
+            <h2>DIAGNÓSTICO DEL MODELO OPERATIVO ACTUAL (AS-IS)</h2>
+        </div>
+        <div class="badge">Bloque 1 · Problemática</div>
+    </div>
+    
+    <div class="slide-title">
+        <span class="tag-bloque">BLOQUE 1</span>
+        <span>Problemática de las Filas en Caseta y Bitácoras de Papel</span>
+    </div>
+    
+    <div class="grid-2">
+        <div class="card">
+            <h3>Fallas Críticas del Proceso Tradicional (Papel)</h3>
+            <ul>
+                <li><strong>Filas kilométricas en horas pico:</strong> Entre 06:45 y 08:00 hrs, el tráfico en Caseta 1 (Blvd. López Mateos) invade carriles públicos de la ciudad.</li>
+                <li><strong>Tiempos de espera de 15 a 30 segundos por auto:</strong> Con 10 a 15 segundos perdidos solo en dictado manual entre oficiales de caseta.</li>
+                <li><strong>Omisión sistemática de salidas:</strong> Para evitar colapso vial en la tarde, no se registran las salidas (0% de trazabilidad de egresos).</li>
+                <li><strong>Aforo desconocido:</strong> La administración no puede conocer cuántos vehículos están dentro de los 450 cajones del campus.</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>Consecuencia:</strong> Falta de control sobre autos en lista negra, desorden vehicular e invasión de paradas de autobús por plataformas.
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Cobertura en los 3 Accesos del Campus CUTM</h3>
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th>Caseta / Acceso</th>
+                        <th>Ubicación</th>
+                        <th>Tráfico Diario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Caseta 1 (Norte)</strong></td>
+                        <td>Blvd. Adolfo López Mateos</td>
+                        <td>55% (Acceso principal)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caseta 2 (Poniente)</strong></td>
+                        <td>Av. Universidad</td>
+                        <td>30% (Estudiantes/FADU)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Caseta 3 (Este)</strong></td>
+                        <td>Área Deportiva y F.I.T.</td>
+                        <td>15% (Unidades F.I.T. y proveedores)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 15px; font-size: 9.5pt; color: #94a3b8;">
+                <p><strong>Meta del Proyecto:</strong> Digitalizar y conectar en la nube las 3 casetas mediante una aplicación AppSheet accesible desde teléfonos móviles y computadoras.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <span>Levantamiento de Requisitos según ISO/IEC/IEEE 29148:2018</span>
+        <span>UAT Campus CUTM Sur</span>
+    </div>
+</div>
+
+<!-- SLIDE 3: BLOQUE 2 - ENTREVISTAS -->
+<div class="slide" id="slide3">
+    <div class="header">
+        <div class="logo-area">
+            <h1>INGENIERÍA DE REQUISITOS Y TRABAJO DE CAMPO</h1>
+            <h2>ENTREVISTAS OBLIGATORIAS AL PERSONAL OPERATIVO</h2>
+        </div>
+        <div class="badge">Bloque 2 · Entrevistas</div>
+    </div>
+    
+    <div class="slide-title">
+        <span class="tag-bloque">BLOQUE 2</span>
+        <span>Entrevistas Reales en Caseta y Requisitos Levantados</span>
+    </div>
+    
+    <div class="grid-2">
+        <div class="card">
+            <h3>Entrevista Real en Caseta 1: Oficial Pedro Martínez</h3>
+            <div style="font-size: 9pt; line-height: 1.5; color: #e2e8f0;">
+                <p style="margin-bottom: 8px;"><strong>1. Dinámica en pareja:</strong> <em>"Mi compañero en el carril me dicta el nombre, si es DiDi o Uber y el área; tarda <strong>10 a 15 segundos</strong>."</em></p>
+                <p style="margin-bottom: 8px;"><strong>2. Datos obligatorios:</strong> <em>"Nombre, apellido, aplicación, identificación INE o licencia, área que visita y asunto."</em></p>
+                <p style="margin-bottom: 8px;"><strong>3. Problema con DiDis:</strong> <em>"No afecta que entren, se pide identificación a todos, pero <strong>siempre tienen problemas con que hacen rampa en las paradas de camión</strong>."</em></p>
+                <p style="margin-bottom: 8px;"><strong>4. Medios actuales:</strong> <em>"La radio es el único digital, y el celular para avisar a los grupos de WhatsApp y <strong>tomar pruebas o fotos</strong>."</em></p>
+                <p><strong>5. Tiempo total:</strong> <em>"Nos toma entre <strong>15 y 30 segundos</strong> por vehículo."</em></p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Requisitos de Software Derivados (IEEE 830)</h3>
+            <ul style="font-size: 9.5pt;">
+                <li style="margin-bottom: 6px;"><strong>RF-004 / RF-005:</strong> Escaneo QR por cámara móvil en &lt; 2 segundos y autocompletado inteligente.</li>
+                <li style="margin-bottom: 6px;"><strong>RF-008:</strong> Formulario rápido para plataformas (DiDi/Uber): Nombre, Apellido, INE/Licencia, Facultad y Asunto.</li>
+                <li style="margin-bottom: 6px;"><strong>RF-023:</strong> Módulo de <strong>Evidencia Fotográfica Móvil</strong> para registrar pruebas de incidentes e infracciones en la nube.</li>
+                <li style="margin-bottom: 6px;"><strong>RF-024:</strong> Regla de Negocio Vial: <strong>Aviso automático de Prohibido hacer rampa en paradas de autobús</strong> (tolerancia 15 min).</li>
+                <li><strong>RF-009:</strong> Salida rápida en <strong>1-Click</strong> con cálculo automático de permanencia.</li>
+            </ul>
+            
+            <div class="highlight-box" style="margin-top: 12px; padding: 8px 12px; font-size: 9pt;">
+                <strong>Solución:</strong> Reducción del tiempo de carril de 30 segundos a solo <strong>3-5 segundos</strong>.
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <span>Estándares: IEEE Std 830-1998 · ISO/IEC 25010 Calidad de Software</span>
+        <span>Caseta 1 · Blvd. Adolfo López Mateos</span>
+    </div>
+</div>
+
+<!-- SLIDE 4: TRANSICIÓN A LIVE DEMO -->
+<div class="slide" id="slide4">
+    <div class="header">
+        <div class="logo-area">
+            <h1>DEMOSTRACIÓN DEL SISTEMA EN PRODUCCIÓN</h1>
+            <h2>GOOGLE APPSHEET & GOOGLE SHEETS EN TIEMPO REAL</h2>
+        </div>
+        <div class="badge">Bloque 3 · Demostración en Vivo</div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 70px;">
+        <span class="tag-bloque" style="font-size: 14pt; padding: 6px 20px;">BLOQUE 3 (3 a 4 minutos)</span>
+        <h2 style="font-size: 26pt; margin: 25px 0 15px 0; color: #ffffff;">Demostración Operativa en Vivo</h2>
+        <h3 style="font-size: 15pt; color: #38bdf8; font-weight: normal; margin-bottom: 35px;">
+            A continuación se presenta la aplicación móvil en ejecución en tiempo real:
+        </h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 950px; margin: 0 auto; text-align: left;">
+            <div class="card" style="border-top: 3px solid #38bdf8;">
+                <h4 style="color: #38bdf8; font-size: 11pt; margin-bottom: 8px;">1. Registrar Entrada</h4>
+                <p style="font-size: 9pt;">Lectura de código QR con la cámara del celular o captura en 10 seg de un DiDi/Uber con INE y destino.</p>
+            </div>
+            <div class="card" style="border-top: 3px solid #D99B00;">
+                <h4 style="color: #D99B00; font-size: 11pt; margin-bottom: 8px;">2. Monitoreo en Campus</h4>
+                <p style="font-size: 9pt;">Visualización instantánea del vehículo dentro de las instalaciones y cálculo de aforo disponible.</p>
+            </div>
+            <div class="card" style="border-top: 3px solid #22c55e;">
+                <h4 style="color: #22c55e; font-size: 11pt; margin-bottom: 8px;">3. Salida en 1-Click</h4>
+                <p style="font-size: 9pt;">Confirmación de salida con un solo toque, estampando la hora exacta y liberando el cupo del campus.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <span>App URL: appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7</span>
+        <span>Google Cloud & AppSheet Ecosystem</span>
+    </div>
+</div>
+
+<!-- SLIDE 5: CONCLUSIONES -->
+<div class="slide" id="slide5">
+    <div class="header">
+        <div class="logo-area">
+            <h1>CONCLUSIONES Y VENTAJAS DE LA SOLUCIÓN</h1>
+            <h2>SISTEMA DE CONTROL DE ACCESO VEHICULAR UAT CUTM SUR</h2>
+        </div>
+        <div class="badge">Bloque 4 · Conclusiones</div>
+    </div>
+    
+    <div class="slide-title">
+        <span class="tag-bloque">BLOQUE 4</span>
+        <span>Conclusiones, Ventajas y Métricas de Impacto</span>
+    </div>
+    
+    <div class="grid-2">
+        <div class="card">
+            <h3>Métricas de Impacto Operativo</h3>
+            <table class="table-custom">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Antes (Papel)</th>
+                        <th>Con AppSheet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Tiempo por vehículo</strong></td>
+                        <td>15 - 30 seg</td>
+                        <td><strong style="color: #22c55e;">2 a 4 segundos</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Registro de salidas</strong></td>
+                        <td>0% (Omitidas)</td>
+                        <td><strong style="color: #22c55e;">100% (1-Click)</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Control DiDi / Uber</strong></td>
+                        <td>Hacen rampa</td>
+                        <td><strong style="color: #22c55e;">Aviso y control 15 min</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Evidencia de incidentes</strong></td>
+                        <td>WhatsApp suelto</td>
+                        <td><strong style="color: #22c55e;">Fotos ligadas en Drive</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Generación de reportes</strong></td>
+                        <td>15 días hábiles</td>
+                        <td><strong style="color: #22c55e;">1 clic en Drive/Excel</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h3>Ventajas de la Arquitectura Cloud</h3>
+            <ul style="font-size: 9.5pt;">
+                <li style="margin-bottom: 8px;"><strong>Cero costo de servidores:</strong> Solución 100% *Serverless* montada sobre Google Workspace y AppSheet.</li>
+                <li style="margin-bottom: 8px;"><strong>Soporte Offline nativo:</strong> Si se cae la red celular o Wi-Fi en caseta, la app sigue registrando y sincroniza al volver la señal.</li>
+                <li style="margin-bottom: 8px;"><strong>Multiplataforma:</strong> Funciona en teléfonos Android, iPhones, tablets y laptops con la misma base de datos.</li>
+                <li><strong>Innovación y Seguridad:</strong> Bahías de autobús despejadas, aforo controlado sobre 450 cajones y detección inmediata de autos en lista negra.</li>
+            </ul>
+            
+            <div class="highlight-box" style="margin-top: 15px; text-align: center;">
+                <strong>"Innovación, Tecnología y Trabajo en Equipo para una UAT más Inteligente"</strong>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bar">
+        <span>Facultad de Ingeniería Tampico · Coordinación de Sistemas Computacionales</span>
+        <span>Google Dev Day 2026</span>
+    </div>
+</div>
+
+<script>
+    let currentSlide = 1;
+    const totalSlides = 5;
+    
+    function showSlide(num) {
+        for (let i = 1; i <= totalSlides; i++) {
+            const s = document.getElementById('slide' + i);
+            if (s) s.classList.remove('active');
+        }
+        const target = document.getElementById('slide' + num);
+        if (target) target.classList.add('active');
+        currentSlide = num;
+        console.log("Showing slide:", num);
+    }
+    
+    window.showSlide = showSlide;
+</script>
+</body>
+</html>
