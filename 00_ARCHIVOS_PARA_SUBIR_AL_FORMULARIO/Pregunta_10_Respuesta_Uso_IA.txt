@@ -1,0 +1,5 @@
+Opción a seleccionar en el formulario:
+(*) Sí
+
+Justificación:
+Se utilizaron herramientas de Inteligencia Artificial (Google Gemini, Antigravity AI Agent y GitHub Copilot) como asistentes de ingeniería cognitiva (Copilot), manteniendo en todo momento la autoría, investigación de campo, criterio arquitectónico y validación técnica en manos del equipo humano.

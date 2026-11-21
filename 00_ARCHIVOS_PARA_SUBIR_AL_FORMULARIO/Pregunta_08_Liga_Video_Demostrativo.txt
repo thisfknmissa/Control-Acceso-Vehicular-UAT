@@ -1,0 +1,10 @@
+https://drive.google.com/file/d/16-ekBmB20LSHtHihXq6YUDP3WSaA8-dE/view?usp=sharing
+
+Descripción del Video Demostrativo Oficial:
+- Duración: 5 minutos y 39 segundos (calidad Full HD con narración en español neutro).
+- Permisos: Acceso público verificado (cualquier persona con el enlace puede ver y reproducir).
+- Contenido presentado conforme a las bases del concurso:
+  1. Planteamiento de la problemática de filas y cuellos de botella en casetas del campus CUTM Sur (0:00 - 1:05).
+  2. Levantamiento de requisitos y entrevistas de campo a guardias, directivos y estudiantes (1:05 - 2:05).
+  3. Demostración operativa en vivo en Google AppSheet: registro de entrada vehicular, autocompletado en padrón, visualización de estatus en campus y salida ágil en 1-clic (2:05 - 4:25).
+  4. Conclusiones, métricas de reducción de tiempos y ventajas de la solución (4:25 - 5:39).
