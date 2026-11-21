@@ -8,15 +8,15 @@
 
 ### ENLACES OFICIALES DEL SISTEMA EN PRODUCCIÓN
 
-- 📱 **Aplicación Oficial en Vivo (Google AppSheet):**  
+- **Aplicación Oficial en Vivo (Google AppSheet):**  
   [https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7](https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7)
-- 🛠️ **Consola de Configuración y Editor (AppSheet Editor):**  
+- **Consola de Configuración y Editor (AppSheet Editor):**  
   [https://www.appsheet.com/template/AppDef?appName=ControlAccesoVehicularUAT-632474306&appId=a52cb700-5be6-41da-9d84-1a37db2d04e7](https://www.appsheet.com/template/AppDef?appName=ControlAccesoVehicularUAT-632474306&appId=a52cb700-5be6-41da-9d84-1a37db2d04e7)
-- 📊 **Base de Datos Matriz Relacional (Google Sheets en Drive):**  
+- **Base de Datos Matriz Relacional (Google Sheets en Drive):**  
   [https://docs.google.com/spreadsheets/d/1FDGUttF4hHaQmX1K7Zfw-p0QCds8H8U1/edit](https://docs.google.com/spreadsheets/d/1FDGUttF4hHaQmX1K7Zfw-p0QCds8H8U1/edit)
-- 🎥 **• Video Demostrativo Oficial (Google Drive):**  
+- **• Video Demostrativo Oficial (Google Drive):**  
   [https://drive.google.com/file/d/16-ekBmB20LSHtHihXq6YUDP3WSaA8-dE/view?usp=sharing](https://drive.google.com/file/d/16-ekBmB20LSHtHihXq6YUDP3WSaA8-dE/view?usp=sharing) *(Pega aquí tu enlace de YouTube u oculto de Drive)*
-- 👤 **Cuenta Propietaria / Desarrollador:** `jmisaeldiaz.1@gmail.com`
+- **Cuenta Propietaria / Desarrollador:** `jmisaeldiaz.1@gmail.com`
 
 ---
 

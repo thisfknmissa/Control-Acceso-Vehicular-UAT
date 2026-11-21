@@ -51,7 +51,7 @@ El **Sistema de Control de Acceso Vehicular UAT CUTM Sur** no es una simple pág
 1. En tu dispositivo móvil, abre la tienda **Google Play Store** (Android) o **App Store** (Apple) y descarga la app gratuita **AppSheet**.
 2. Abre la aplicación AppSheet y selecciona **"Sign in with Google"** ingresando con tu cuenta institucional (`@uat.edu.mx`).
 3. En la pestaña **"Shared with me"** o ingresando directamente al enlace oficial:
-   👉 **[https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7](https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7)**
+   • **[https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7](https://www.appsheet.com/start/a52cb700-5be6-41da-9d84-1a37db2d04e7)**
 4. Presiona el botón del menú de tres puntos y selecciona **"Add shortcut to Home screen" (Agregar a pantalla de inicio)**.
 5. Se creará un icono directo de **"Control Acceso UAT"** en tu pantalla de inicio que abrirá la aplicación a pantalla completa, exactamente como una app nativa instalada.
 
